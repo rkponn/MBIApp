@@ -19,7 +19,7 @@ const MBIview = () => {
     function validateVal(e) {
         // keep page from refreshing on submit
         e.preventDefault();
-        const result = axios.get(`validate_mbi/${text}`)
+        const result = axios.get(`https://gen-val-mbi-api.herokuapp.com/validate_mbi/${text}`)
         .then(res => {
             setValid(res.data);
         })
