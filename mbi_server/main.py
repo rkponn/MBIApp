@@ -1,4 +1,5 @@
 """Validator and Genrator of MBIs"""
+from distutils.log import debug
 import re
 from sre_parse import DIGITS
 from flask import Flask
@@ -34,14 +35,19 @@ MBI_PATTERN = [
 
 # Helpers
 def validator(mbi):
-    """Validate if MBI follows standard."""
+    """Validate if MBI follows standards."""
+    # For readability type variables are added as this is the standard and names used for MBI
+    typeC = NON_ZERO_DIGITS
+    typeA = LETTERS
+    typeAN = DIGIT_LETTERS
+    typeN = digits
     
     # MBI pattern being checked
     matched = re.match(
-        f"{NON_ZERO_DIGITS}][{LETTERS}][{DIGIT_LETTERS}][{DIGITS}][{LETTERS}][{DIGIT_LETTERS}][{DIGITS}][{LETTERS}][{LETTERS}][{DIGITS}][{DIGITS}]",
-        mbi
+        f"[{typeC}][{typeA}][{typeAN}][{typeN}][{typeA}][{typeAN}][{typeN}][{typeA}][{typeA}][{typeN}][{typeN}]",
+        mbi,
     )
-    
+    # True or False if pattern matches
     return bool(matched)
 
 # Api Routes
@@ -54,9 +60,10 @@ def generate_mbi():
 def validate_mbi(mbi):
     """Will MBI and return a string of True or False."""
     if validator(mbi) == True:
-        return "True"
+        return 'True'
     else:
-        return "False"
+        return 'False'
+
     
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
