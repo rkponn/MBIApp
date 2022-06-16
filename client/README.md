@@ -1,3 +1,10 @@
+This project will have a simple UI
+- it will generate a MBI number and display
+- it will validate and return true or false
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
