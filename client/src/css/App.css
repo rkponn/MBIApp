@@ -1,0 +1,11 @@
+.title {
+  text-align: center;
+}
+
+.mbi-valid {
+  color: green;
+}
+
+.mbi-invalid {
+  color: red;
+}
