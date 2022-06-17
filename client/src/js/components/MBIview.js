@@ -22,7 +22,7 @@ const MBIview = () => {
         const result = axios(
           {
             method: 'post',
-            url: 'https://mbi-v2.herokuapp.com/mbi/',
+            url: 'https://gen-val-mbi-api.herokuapp.com/mbi/',
             data: {
               "mbi": text
             }
