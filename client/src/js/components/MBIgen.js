@@ -12,7 +12,6 @@ const MBIgen = () => {
         .then(response => {
             const {data} = response;
             setGenerated(data);
-            console.log(generated);
         })
         .catch(e => console.log(e))
     }
