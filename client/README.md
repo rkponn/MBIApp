@@ -1,3 +1,51 @@
+# MBI Validator and Generator Client - (Medicare Beneficiary Identifier/Identification)
+
+## Table of Contents
+1. [General Info](#general-info)
+2. [Technologies](#technologies)
+3. [Installation](#installation)
+4. [FAQs](#faqs)
+5. [Other](#other)
+
+### General Info
+***
+This UI is built out with Javascript (ES6 standard) and React. It will provide a very simple interface where a user may input a string of characters that will check for the validity based on the standards of [CMS (Centers for Medicare and Medicaid Services)](https://www.cms.gov/Medicare/New-Medicare-Card). Will display True or False based on if format/standard is met. 
+
+
+## Technologies
+***
+A list of technologies used within the project:
+* [React](https://reactjs.org/)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Axios](https://axios-http.com/docs/intro)
+* [React-Bootstrap](https://react-bootstrap.github.io/)
+
+## Installation | Setup
+***
+May vary on system - This will be for MacOs 
+```
+$ git clone https://github.com/rkponn/MBIApp.git
+$ cd ../path/to/the/file
+$ npm install
+$ npm start
+```
+
+## FAQs
+***
+A list of frequently asked questions
+1. **How do I generate a MBI Number?**
+Generate MBI Button, which will display below a valid MBI Number
+2. **How do I validate a MBI Number?**
+
+* Input your characters in the input field (must be 11 characters before verify button becomes active)
+* On verify if standards are or aren't met, a message will display True (green), False (red)
+
+## Other
+***
+* In package.json - "Proxy": *url* to use if in local env
+* In MBIgen and MBIview component files - delete everything before /generate_mbi/ and /validate_mbi/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
