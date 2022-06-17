@@ -26,7 +26,6 @@ May vary on system - This will be for MacOs
 ```
 $ git clone https://github.com/rkponn/MBIApp.git
 $ cd ../path/to/the/file
-=======
 $ cd client/
 $ npm install
 $ npm start
