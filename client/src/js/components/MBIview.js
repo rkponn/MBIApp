@@ -19,9 +19,16 @@ const MBIview = () => {
     function validateVal(e) {
         // keep page from refreshing on submit
         e.preventDefault();
-        const result = axios.get(`https://gen-val-mbi-api.herokuapp.com/validate_mbi/${text}`)
+        const result = axios(
+          {
+            method: 'post',
+            url: 'https://mbi-v2.herokuapp.com/mbi/',
+            data: {
+              "mbi": text
+            }
+          })
         .then(res => {
-            setValid(res.data);
+            setValid(res);
         })
         .catch(err => console.log(err));
         return result;
@@ -33,7 +40,7 @@ const MBIview = () => {
         <HeaderInfo />   
             <Form>
             <Form.Group className="mb-2" controlId="mbiValidator">
-                <Form.Label>Check MBI Validity <b className={valid === 'True' ? 'mbi-valid' : 'mbi-invalid'}>{valid}</b> </Form.Label>
+                <Form.Label>Check MBI Validity <b className={valid.data === 'True' ? 'mbi-valid' : 'mbi-invalid'}>{valid.data}</b> </Form.Label>
                     <Form.Control maxLength={11} minLength={11} onChange={handleChange} type="text" placeholder='Enter MBI...' />
                     <Form.Text className='text-muted'>To ensure input is correct, follow the MBI format above</Form.Text>
             </Form.Group>
