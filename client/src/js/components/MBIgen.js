@@ -8,7 +8,7 @@ const MBIgen = () => {
 
     function fetchData() {
         // Generate MBI
-        axios.get("https://mbi-v2.herokuapp.com/mbi/")
+        axios.get("https://gen-val-mbi-api.herokuapp.com/mbi/")
         .then(response => {
             const {data} = response;
             setGenerated(data);
