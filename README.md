@@ -26,6 +26,10 @@ May vary on system - This will be for MacOs
 ```
 $ git clone https://github.com/rkponn/MBIApp.git
 $ cd ../path/to/the/file
+<<<<<<< HEAD:README.md
+=======
+$ cd client/
+>>>>>>> 782df9fcd7b36357f8560cb47d2aa885c66773b9:client/README.md
 $ npm install
 $ npm start
 ```
