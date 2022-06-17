@@ -19,7 +19,7 @@ const MBIgen = () => {
   return (
 
         <div className="d-grid py-1">
-            <Button variant="success" onClick={fetchData}>Generate Valid MBI</Button>
+            <Button variant="success" onClick={fetchData}>Generate MBI</Button>
             <Form.Text className='text-muted'>Generated MBI will display below.</Form.Text>
             <h1><b>{generated}</b></h1>
         </div>
