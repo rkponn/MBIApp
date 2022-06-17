@@ -5,6 +5,7 @@
 2. [Technologies](#technologies)
 3. [Installation](#installation)
 4. [FAQs](#faqs)
+5. [Other](#other)
 
 ### General Info
 ***
