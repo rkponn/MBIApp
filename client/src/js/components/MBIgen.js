@@ -6,14 +6,15 @@ const MBIgen = () => {
 
     const [generated, setGenerated] = useState('');
 
-    function fetchData() {
+    const fetchData = async () => {
         // Generate MBI
-        axios.get("https://gen-val-mbi-api.herokuapp.com/mbi/")
-        .then(response => {
+        try {
+            const response = await axios.get("https://gen-val-mbi-api.herokuapp.com/mbi/");
             const {data} = response;
             setGenerated(data);
-        })
-        .catch(e => console.log(e))
+        } catch (error) {
+            throw error;
+        }
     }
     
   return (
